@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torre de Hanói - Prof. William Mendes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Torre de Hanói - Prof. William Mendes</h1>
+    <div class="controls">
+        <label for="numDiscos">Número de Discos (3-8):</label>
+        <select id="numDiscos">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <button id="iniciarJogo">Iniciar Jogo</button>
+    </div>
+    <p>Movimentos: <span id="movimentos">0</span></p>
+    <p>Mínimo de Movimentos: <span id="minMovimentos">0</span></p>
+    <div class="game-container">
+        <div class="pino" id="pino1">
+            <div class="base-pino"></div>
+            <div class="haste-pino"></div>
+            <div class="discos-container"></div>
+        </div>
+        <div class="pino" id="pino2">
+            <div class="base-pino"></div>
+            <div class="haste-pino"></div>
+            <div class="discos-container"></div>
+        </div>
+        <div class="pino" id="pino3">
+            <div class="base-pino"></div>
+            <div class="haste-pino"></div>
+            <div class="discos-container"></div>
+        </div>
+    </div>
+    <div id="mensagem"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 30px;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.controls label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.controls select {
+    padding: 8px 12px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.controls button:hover {
+    background: #45a049;
+}
+
+p {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 50px;
+    margin: 50px 0;
+    min-height: 300px;
+}
+
+.pino {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.base-pino {
+    width: 150px;
+    height: 20px;
+    background: #8B4513;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.haste-pino {
+    width: 8px;
+    height: 200px;
+    background: #654321;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 20px;
+    box-shadow: 2px 0 4px rgba(0,0,0,0.3);
+}
+
+.discos-container {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.disco {
+    height: 25px;
+    border-radius: 12px;
+    margin: 2px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border: 3px solid rgba(255,255,255,0.3);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disco::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.disco:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.disco.selecionado {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(255,255,0,0.6);
+    border-color: yellow;
+}
+
+.disco-1 { width: 60px; background: #FF6B6B; }
+.disco-2 { width: 80px; background: #4ECDC4; }
+.disco-3 { width: 100px; background: #45B7D1; }
+.disco-4 { width: 120px; background: #96CEB4; }
+.disco-5 { width: 140px; background: #FFEAA7; }
+.disco-6 { width: 160px; background: #DDA0DD; }
+.disco-7 { width: 180px; background: #98D8C8; }
+.disco-8 { width: 200px; background: #F7DC6F; }
+
+#mensagem {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.vitoria {
+    background: rgba(76, 175, 80, 0.8) !important;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        gap: 20px;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+    
+    .pino {
+        min-width: 120px;
+    }
+    
+    .base-pino {
+        width: 120px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .disco-1 { width: 50px; }
+    .disco-2 { width: 65px; }
+    .disco-3 { width: 80px; }
+    .disco-4 { width: 95px; }
+    .disco-5 { width: 110px; }
+    .disco-6 { width: 125px; }
+    .disco-7 { width: 140px; }
+    .disco-8 { width: 155px; }
+}
+
