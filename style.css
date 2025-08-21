@@ -199,3 +199,11 @@ p {
     .disco-8 { width: 155px; }
 }
 
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
